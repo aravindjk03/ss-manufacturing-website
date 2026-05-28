@@ -19,9 +19,9 @@ function ProgressBar({ value, label, start }: { value: number; label: string; st
     <div className="mb-6">
       <div className="flex justify-between text-sm font-medium mb-2">
         <span className="text-white">{label}</span>
-        <span className="text-accent font-bold">{value}%</span>
+        <span className="text-white font-bold">{value}%</span>
       </div>
-      <div className="h-1.5 bg-white/10">
+      <div className="h-1.5 bg-[#0d1f3c]/10">
         <div
           className="h-full bg-accent transition-all duration-1500 ease-out"
           style={{ width: `${width}%`, transition: "width 1.5s ease-out" }}
@@ -37,9 +37,9 @@ function ESGStat({ value, label, inView }: { value: string; label: string; inVie
       initial={{ scale: 0.8, opacity: 0 }}
       animate={inView ? { scale: 1, opacity: 1 } : {}}
       transition={{ duration: 0.5 }}
-      className="text-center p-8 border border-white/10 bg-white/5"
+      className="text-center p-8 border border-white/10 bg-[#0d1f3c]/5"
     >
-      <div className="text-4xl font-black text-accent mb-2">{value}</div>
+      <div className="text-4xl font-black text-white mb-2">{value}</div>
       <div className="text-sm text-gray-300 uppercase tracking-wider">{label}</div>
     </motion.div>
   );
@@ -84,7 +84,7 @@ export default function ESGPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Our ESG Framework</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Our ESG Framework</div>
             <h2 className="text-3xl md:text-4xl font-black text-primary">The Three Pillars of Our Commitment</h2>
           </motion.div>
           <motion.div
@@ -176,7 +176,7 @@ export default function ESGPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Actions</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Actions</div>
             <h2 className="text-3xl md:text-4xl font-black text-white">Our ESG Commitments</h2>
           </motion.div>
           <motion.div
@@ -184,7 +184,7 @@ export default function ESGPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#0d1f3c]/10"
           >
             {[
               { icon: Leaf, title: "Sustainable Manufacturing", desc: "Integrating environmental standards into every production process and facility operation." },
@@ -199,7 +199,7 @@ export default function ESGPage() {
                 whileHover={{ y: -4 }}
               >
                 <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                  <item.icon size={22} className="text-accent" />
+                  <item.icon size={22} className="text-white" />
                 </div>
                 <h3 className="font-bold text-white text-base mb-3">{item.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
@@ -219,7 +219,7 @@ export default function ESGPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Progress Metrics</div>
+              <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Progress Metrics</div>
               <h2 className="text-3xl font-black text-white mb-8">Measuring What Matters</h2>
               <ProgressBar value={30} label="Waste Reduction Target" start={progressInView} />
               <ProgressBar value={25} label="Renewable Energy Integration" start={progressInView} />
@@ -254,7 +254,7 @@ export default function ESGPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Credentials</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Credentials</div>
             <h2 className="text-3xl md:text-4xl font-black text-primary">Certifications & Compliance</h2>
             <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
               We are actively working towards obtaining and maintaining the following certifications as part of our quality and sustainability roadmap.
@@ -271,7 +271,7 @@ export default function ESGPage() {
               { label: "ISO 9001:2015", sub: "Quality Management System", status: "In Progress", color: "border-yellow-400 bg-yellow-50 text-yellow-700" },
               { label: "ISO 14001:2015", sub: "Environmental Management", status: "In Progress", color: "border-green-400 bg-green-50 text-green-700" },
               { label: "IATF 16949", sub: "Automotive Quality Standard", status: "Roadmap 2026", color: "border-blue-400 bg-blue-50 text-blue-700" },
-              { label: "Customer Compliance", sub: "OEM-Specific Standards", status: "Compliant", color: "border-accent bg-red-50 text-accent" },
+              { label: "Customer Compliance", sub: "OEM-Specific Standards", status: "Compliant", color: "border-accent bg-red-50 text-white" },
             ].map((cert) => (
               <motion.div
                 key={cert.label}

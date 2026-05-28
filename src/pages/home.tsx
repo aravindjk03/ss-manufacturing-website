@@ -64,19 +64,19 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 text-accent px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-6">
+            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 text-white px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-6">
               <Cog size={12} />
               Near Kanchipuram, Tamil Nadu, India
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight mb-4">
               SS Manufacturing
-              <span className="block text-accent">Private Limited</span>
+              <span className="block text-white">Private Limited</span>
             </h1>
             <div className="text-xs font-bold tracking-[0.4em] uppercase text-white/40 mb-6">SSMPL</div>
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-4 leading-relaxed">
               Trusted Manufacturing Partner for Automotive Safety Components — seat belts, retractors, buckles, and safety assemblies for India's leading OEMs.
             </p>
-            <p className="text-accent font-semibold tracking-wide text-sm mb-10 italic">
+            <p className="text-white font-semibold tracking-wide text-sm mb-10 italic">
               "Earlier, The more Closer — The more Secure."
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -86,7 +86,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-semibold px-8 tracking-wide" data-testid="button-contact-us">
+                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-[#0d1f3c]/10 font-semibold px-8 tracking-wide" data-testid="button-contact-us">
                   Contact Us
                 </Button>
               </Link>
@@ -116,7 +116,7 @@ export default function HomePage() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
           >
             <motion.div variants={fadeUp}>
-              <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">SSMPL — Who We Are</div>
+              <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">SSMPL — Who We Are</div>
               <h2 className="text-3xl md:text-4xl font-black text-primary mb-6 leading-tight">
                 For Your Safety Life.<br />
                 <span className="text-secondary font-medium text-2xl">Built Around Every Journey.</span>
@@ -141,7 +141,7 @@ export default function HomePage() {
                 { icon: CheckCircle, label: "OEM Customers", value: "HMI · RNAIPL · KMI" },
               ].map((item) => (
                 <div key={item.label} className="border border-border bg-card p-6 group hover:border-accent transition-colors">
-                  <item.icon size={26} className="text-accent mb-3" />
+                  <item.icon size={26} className="text-white mb-3" />
                   <div className="text-lg font-black text-primary leading-tight">{item.value}</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{item.label}</div>
                 </div>
@@ -155,12 +155,12 @@ export default function HomePage() {
       <section className="py-20 bg-[#0A1628]">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Our Strengths</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Our Strengths</div>
             <h2 className="text-3xl md:text-4xl font-black text-white">Why Choose SS Manufacturing?</h2>
           </motion.div>
           <motion.div
             variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#0d1f3c]/10"
           >
             {[
               { icon: ShieldCheck, title: "OEM-Grade Quality", desc: "Components built to ECE R16, HMC ES/MS, and BMIR standards with full dimensional traceability per batch." },
@@ -176,7 +176,7 @@ export default function HomePage() {
                 whileHover={{ y: -4 }}
               >
                 <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                  <item.icon size={22} className="text-accent" />
+                  <item.icon size={22} className="text-white" />
                 </div>
                 <h3 className="font-bold text-white text-lg mb-3">{item.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
@@ -194,7 +194,7 @@ export default function HomePage() {
             className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-14"
           >
             <div>
-              <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">What We Make</div>
+              <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">What We Make</div>
               <h2 className="text-3xl md:text-4xl font-black text-primary">Our Core Products</h2>
             </div>
             <Link href="/products">
@@ -217,13 +217,13 @@ export default function HomePage() {
               >
                 <div className="h-2 bg-gradient-to-r from-primary to-accent group-hover:from-accent group-hover:to-primary transition-all duration-300" />
                 <div className="p-8">
-                  <div className="inline-block text-xs text-accent border border-accent/30 bg-accent/5 px-3 py-1 font-semibold tracking-wider uppercase mb-4">{product.tag}</div>
-                  <product.icon size={30} className="text-primary mb-4 group-hover:text-accent transition-colors" />
+                  <div className="inline-block text-xs text-white border border-accent/30 bg-accent/5 px-3 py-1 font-semibold tracking-wider uppercase mb-4">{product.tag}</div>
+                  <product.icon size={30} className="text-primary mb-4 group-hover:text-white transition-colors" />
                   <h3 className="font-black text-xl text-primary mb-2">{product.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-3">{product.desc}</p>
-                  <div className="text-xs font-bold text-accent/70 tracking-wider uppercase border-t border-border pt-3 mt-3">{product.models}</div>
+                  <div className="text-xs font-bold text-white/70 tracking-wider uppercase border-t border-border pt-3 mt-3">{product.models}</div>
                   <Link href="/products" className="mt-4 inline-flex">
-                    <span className="text-sm font-semibold text-accent flex items-center gap-1 hover:gap-3 transition-all">
+                    <span className="text-sm font-semibold text-white flex items-center gap-1 hover:gap-3 transition-all">
                       View Details <ArrowRight size={14} />
                     </span>
                   </Link>
@@ -241,7 +241,7 @@ export default function HomePage() {
         <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
         <div className="relative container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Trusted By India's Top OEMs</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Trusted By India's Top OEMs</div>
             <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4">
               Our Customers
             </h2>
@@ -258,7 +258,7 @@ export default function HomePage() {
                 name: "Hyundai Motor India",
                 location: "Sriperumbudur, Tamil Nadu",
                 logo: "/logos/hmi-logo.png",
-                logoBg: "bg-white",
+                logoBg: "bg-[#0d1f3c]",
                 desc: "Tier-1 safety component supplier for Hyundai's India manufacturing operations. Supplying retractor and buckle assemblies across B and C segment vehicle lines.",
                 distance: "40 km",
                 distanceLabel: "From SSMPL",
@@ -270,7 +270,7 @@ export default function HomePage() {
                 name: "Renault Nissan Automotive India",
                 location: "Oragadam, Tamil Nadu",
                 logo: "/logos/rnaipl-logo.png",
-                logoBg: "bg-white",
+                logoBg: "bg-[#0d1f3c]",
                 desc: "Premier seat belt assembly supplier for Renault-Nissan's Chennai plant. XBA model first delivered in 2015 — a decade-long supply partnership.",
                 distance: "7 km",
                 distanceLabel: "From R&N Facility",
@@ -282,7 +282,7 @@ export default function HomePage() {
                 name: "Kia Motors India",
                 location: "Anantapur, Andhra Pradesh",
                 logo: "/logos/kmi-logo.png",
-                logoBg: "bg-white",
+                logoBg: "bg-[#0d1f3c]",
                 desc: "Safety systems partner for Kia's rapidly growing India lineup. Providing OEM-grade buckle and retractor systems across Kia's India vehicle range.",
                 distance: "—",
                 distanceLabel: "Pan-India Supply",
@@ -298,7 +298,7 @@ export default function HomePage() {
                 data-testid={`card-customer-${c.code.toLowerCase()}`}
               >
                 {/* Logo area */}
-                <div className="h-44 flex items-center justify-center bg-white border-b border-white/10 overflow-hidden p-6">
+                <div className="h-44 flex items-center justify-center bg-[#0d1f3c] border-b border-white/10 overflow-hidden p-6">
                   <img
                     src={c.logo}
                     alt={`${c.name} logo`}
@@ -310,7 +310,7 @@ export default function HomePage() {
                 {/* Content */}
                 <div className="p-8 flex flex-col flex-1">
                   <div className="mb-4">
-                    <div className="text-xs font-bold text-accent uppercase tracking-widest mb-1">{c.code}</div>
+                    <div className="text-xs font-bold text-white uppercase tracking-widest mb-1">{c.code}</div>
                     <div className="text-white font-black text-lg leading-tight">{c.name}</div>
                     <div className="text-xs text-gray-500 mt-1">{c.location}</div>
                   </div>
@@ -330,10 +330,10 @@ export default function HomePage() {
                   {/* Distance stat */}
                   <div className="border-t border-white/10 pt-5 mt-auto flex items-end justify-between">
                     <div>
-                      <div className="text-2xl font-black text-accent">{c.distance}</div>
+                      <div className="text-2xl font-black text-white">{c.distance}</div>
                       <div className="text-[10px] text-gray-500 uppercase tracking-widest mt-0.5">{c.distanceLabel}</div>
                     </div>
-                    <div className="text-xs text-accent font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                    <div className="text-xs text-white font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
                       Active Partner <ChevronRight size={12} />
                     </div>
                   </div>
@@ -343,13 +343,13 @@ export default function HomePage() {
           </motion.div>
 
           {/* Bottom trust strip */}
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-10 border border-white/10 bg-white/5 px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-10 border border-white/10 bg-[#0d1f3c]/5 px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-sm text-gray-400">
               <span className="text-white font-bold">3 OEM customers</span> &nbsp;·&nbsp; Standards: ECE R16, HMC ES/MS, BMIR &nbsp;·&nbsp; 1.2M units/year capacity
             </div>
             <div className="flex gap-2">
               {["ECE R16", "HMC ES/MS", "BMIR"].map((s) => (
-                <span key={s} className="text-[10px] border border-accent/30 text-accent px-2 py-1 font-bold tracking-widest">{s}</span>
+                <span key={s} className="text-[10px] border border-accent/30 text-white px-2 py-1 font-bold tracking-widest">{s}</span>
               ))}
             </div>
           </motion.div>
@@ -364,7 +364,7 @@ export default function HomePage() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
           >
             <motion.div variants={fadeUp}>
-              <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Responsibility</div>
+              <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Responsibility</div>
               <h2 className="text-3xl md:text-4xl font-black text-primary mb-6">ESG at the Core of Everything We Do</h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Sustainability is not a checkbox for us — it is a design principle. From how we source raw materials to how we treat our 600-person workforce, our ESG commitments shape every operational decision.
@@ -378,7 +378,7 @@ export default function HomePage() {
                   "Compliance with ECE R16 and international safety standards",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3 p-3 bg-muted border-l-2 border-accent text-sm text-muted-foreground">
-                    <CheckCircle size={16} className="text-accent mt-0.5 shrink-0" />
+                    <CheckCircle size={16} className="text-white mt-0.5 shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -412,7 +412,7 @@ export default function HomePage() {
       <section className="py-16 bg-background border-y border-border">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-10">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-3">Quality Assurance</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-3">Quality Assurance</div>
             <h2 className="text-2xl font-black text-primary">Internationally Certified</h2>
             <p className="text-muted-foreground text-sm mt-2 max-w-lg mx-auto">
               Our facility and management systems are certified across six international standards — covering quality, environment, safety, energy, and information security.
@@ -425,7 +425,7 @@ export default function HomePage() {
               { code: "ISO 45001", label: "Occupational Health & Safety", color: "text-orange-600" },
               { code: "ISO 50001", label: "Energy Management System", color: "text-yellow-600" },
               { code: "ISO 27001", label: "Information Security Management", color: "text-purple-600" },
-              { code: "ISO 37001", label: "Anti-Bribery Management System", color: "text-red-600" },
+              { code: "ISO 37001", label: "Anti-Bribery Management System", color: "text-white" },
             ].map((cert) => (
               <motion.div
                 key={cert.code} variants={fadeUp}
@@ -463,7 +463,7 @@ export default function HomePage() {
       <section className="py-20 bg-[#0A1628]">
         <div className="container mx-auto px-4 text-center">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-6">Get In Touch</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-6">Get In Touch</div>
             <h2 className="text-3xl md:text-4xl font-black text-white mb-6 max-w-2xl mx-auto">
               Looking for a Reliable Automotive Safety Component Partner?
             </h2>

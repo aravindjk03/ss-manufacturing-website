@@ -123,14 +123,14 @@ export default function ProductsPage() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Product Range</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Product Range</div>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-4">Our Products</h1>
             <p className="text-gray-300 max-w-2xl text-lg">
               Retractors, buckles, height adjusters, and webbing — seat belt systems built to ECE R16, HMC ES/MS, and BMIR standards.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["ECE R16", "HMC ES/MS", "BMIR"].map((s) => (
-                <span key={s} className="text-xs border border-accent/40 text-accent px-3 py-1 font-bold tracking-widest">{s}</span>
+                <span key={s} className="text-xs border border-accent/40 text-white px-3 py-1 font-bold tracking-widest">{s}</span>
               ))}
             </div>
           </motion.div>
@@ -147,7 +147,7 @@ export default function ProductsPage() {
                 onClick={() => setActiveCategory(cat)}
                 data-testid={`button-filter-${cat.toLowerCase().replace(/ /g, "-")}`}
                 className={`px-4 py-2 text-xs font-bold tracking-wide border transition-colors uppercase ${
-                  activeCategory === cat ? "bg-accent text-white border-accent" : "border-border text-muted-foreground hover:border-accent hover:text-accent bg-background"
+                  activeCategory === cat ? "bg-accent text-white border-accent" : "border-border text-muted-foreground hover:border-accent hover:text-white bg-background"
                 }`}
               >
                 {cat}
@@ -173,7 +173,7 @@ export default function ProductsPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3">
                   <div className={`bg-gradient-to-br ${product.color} p-10 flex flex-col justify-between min-h-48`}>
                     <div>
-                      <div className="inline-block text-xs text-accent border border-accent/40 bg-accent/10 px-3 py-1 font-bold tracking-wider uppercase mb-6">
+                      <div className="inline-block text-xs text-white border border-accent/40 bg-accent/10 px-3 py-1 font-bold tracking-wider uppercase mb-6">
                         {product.category}
                       </div>
                       <product.icon size={44} className="text-white/80 mb-4" />
@@ -184,7 +184,7 @@ export default function ProductsPage() {
                       <div className="text-xs text-white/50 uppercase tracking-wider">{product.lines}</div>
                       <div className="flex flex-wrap gap-1 mt-1">
                         {product.standards.map((s) => (
-                          <span key={s} className="text-[10px] border border-accent/40 text-accent px-2 py-0.5 font-bold tracking-wider">{s}</span>
+                          <span key={s} className="text-[10px] border border-accent/40 text-white px-2 py-0.5 font-bold tracking-wider">{s}</span>
                         ))}
                       </div>
                     </div>
@@ -200,7 +200,7 @@ export default function ProductsPage() {
                         <ul className="space-y-2">
                           {product.features.map((f) => (
                             <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground">
-                              <ChevronRight size={12} className="text-accent mt-0.5 shrink-0" />{f}
+                              <ChevronRight size={12} className="text-white mt-0.5 shrink-0" />{f}
                             </li>
                           ))}
                         </ul>
@@ -235,7 +235,7 @@ export default function ProductsPage() {
       <section className="py-16 bg-[#0A1628]">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-10">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Quality Assurance</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Quality Assurance</div>
             <h2 className="text-2xl md:text-3xl font-black text-white">Testing Equipment</h2>
             <p className="text-gray-400 text-sm mt-3 max-w-lg mx-auto">
               Every product is validated through our in-house testing laboratory before release.
@@ -243,8 +243,8 @@ export default function ProductsPage() {
           </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {testEquipment.map((eq) => (
-              <motion.div key={eq} variants={fadeUp} className="border border-white/10 bg-white/5 p-4 text-center group hover:border-accent/40 transition-colors">
-                <TestTube size={18} className="text-accent mx-auto mb-2" />
+              <motion.div key={eq} variants={fadeUp} className="border border-white/10 bg-[#0d1f3c]/5 p-4 text-center group hover:border-accent/40 transition-colors">
+                <TestTube size={18} className="text-white mx-auto mb-2" />
                 <div className="text-xs text-gray-300 font-medium leading-tight">{eq}</div>
               </motion.div>
             ))}

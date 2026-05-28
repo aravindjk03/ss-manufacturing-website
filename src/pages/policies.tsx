@@ -82,7 +82,7 @@ export default function PoliciesPage() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Governance</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Governance</div>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-4">Our Policies</h1>
             <p className="text-gray-300 max-w-2xl text-lg">
               Our policies govern every decision we make — from the factory floor to the boardroom. They reflect our commitment to quality, ethics, and responsibility.
@@ -128,7 +128,7 @@ export default function PoliciesPage() {
                         <policy.icon size={18} className="text-muted-foreground group-data-[state=open]:text-white transition-colors" />
                       </div>
                       <div>
-                        <div className="text-xs text-accent font-bold tracking-widest uppercase mb-0.5">Policy {String(i + 1).padStart(2, "0")}</div>
+                        <div className="text-xs text-white font-bold tracking-widest uppercase mb-0.5">Policy {String(i + 1).padStart(2, "0")}</div>
                         <div className="font-black text-primary text-base">{policy.title}</div>
                       </div>
                     </div>
@@ -158,7 +158,7 @@ export default function PoliciesPage() {
       <section className="py-12 bg-[#0A1628]">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-6">
-            <FileText size={22} className="text-accent" />
+            <FileText size={22} className="text-white" />
           </div>
           <h3 className="text-xl font-black text-white mb-4">Policy Updates & Availability</h3>
           <p className="text-gray-300 text-sm leading-relaxed">

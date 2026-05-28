@@ -42,7 +42,7 @@ export default function AboutPage() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">SSMPL — Who We Are</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">SSMPL — Who We Are</div>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-4">About Us</h1>
             <p className="text-gray-300 max-w-2xl text-lg">
               SS Manufacturing Private Limited — a precision automotive safety component manufacturer built to serve India's leading OEMs at scale.
@@ -59,7 +59,7 @@ export default function AboutPage() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"
           >
             <motion.div variants={fadeUp}>
-              <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Company Overview</div>
+              <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Company Overview</div>
               <h2 className="text-3xl font-black text-primary mb-6">SSMPL — Built for OEM Scale.</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 SS Manufacturing Private Limited (SSMPL) is an automotive safety component manufacturer located near Kanchipuram, Tamil Nadu — strategically positioned just 7 km from R&N facilities and 40 km from HMI's manufacturing hub.
@@ -75,7 +75,7 @@ export default function AboutPage() {
               {/* Facility Quick Stats */}
               <div className="bg-muted border border-border p-6 space-y-4">
                 <h3 className="font-black text-primary flex items-center gap-2">
-                  <Factory size={18} className="text-accent" /> Facility Overview
+                  <Factory size={18} className="text-white" /> Facility Overview
                 </h3>
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   {[
@@ -95,7 +95,7 @@ export default function AboutPage() {
               {/* Location */}
               <div className="border-l-4 border-accent pl-6 py-2">
                 <div className="flex items-center gap-2 mb-2">
-                  <MapPin size={16} className="text-accent" />
+                  <MapPin size={16} className="text-white" />
                   <h3 className="font-black text-primary">Location</h3>
                 </div>
                 <p className="text-sm text-muted-foreground">Near Kanchipuram, Tamil Nadu</p>
@@ -116,7 +116,7 @@ export default function AboutPage() {
               {/* Mission */}
               <div className="bg-[#0A1628] p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Target size={16} className="text-accent" />
+                  <Target size={16} className="text-white" />
                   <h3 className="font-black text-white">Our Mission</h3>
                 </div>
                 <ul className="space-y-2">
@@ -161,14 +161,14 @@ export default function AboutPage() {
       <section className="py-20 bg-[#0A1628]">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">What Drives Us</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">What Drives Us</div>
             <h2 className="text-3xl md:text-4xl font-black text-white">Our Core Values</h2>
           </motion.div>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#0d1f3c]/10">
             {values.map((v) => (
               <motion.div key={v.title} variants={fadeUp} whileHover={{ y: -4 }} className="bg-[#0d1f3c] p-8 group hover:bg-[#0f2347] transition-colors" data-testid={`card-value-${v.title.toLowerCase()}`}>
                 <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                  <v.icon size={22} className="text-accent" />
+                  <v.icon size={22} className="text-white" />
                 </div>
                 <h3 className="font-bold text-white text-lg mb-2">{v.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{v.desc}</p>
@@ -182,7 +182,7 @@ export default function AboutPage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Our Journey</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Our Journey</div>
             <h2 className="text-3xl md:text-4xl font-black text-primary">Key Milestones</h2>
           </motion.div>
           <div className="relative max-w-3xl mx-auto">
@@ -202,7 +202,7 @@ export default function AboutPage() {
                   </div>
                   <div className={`pl-16 md:pl-0 w-full md:w-[calc(50%-2.5rem)] ${i % 2 === 0 ? "md:pr-10 md:text-right" : "md:pl-10 md:ml-auto"}`}>
                     <div className="bg-card border border-border p-5 hover:border-accent transition-colors">
-                      <div className="text-accent font-black text-xl mb-1">{item.year}</div>
+                      <div className="text-white font-black text-xl mb-1">{item.year}</div>
                       <div className="font-bold text-primary text-sm mb-1">{item.title}</div>
                       <p className="text-xs text-muted-foreground">{item.desc}</p>
                     </div>

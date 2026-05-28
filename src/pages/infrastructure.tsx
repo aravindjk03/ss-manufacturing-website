@@ -106,7 +106,7 @@ export default function InfrastructurePage() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Manufacturing Capabilities</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Manufacturing Capabilities</div>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-4">Infrastructure</h1>
             <p className="text-gray-300 max-w-2xl text-lg">
               36,364 sq.mt of purpose-built manufacturing near Kanchipuram — 1.2 million units per year, built to OEM specifications.
@@ -139,10 +139,10 @@ export default function InfrastructurePage() {
       <section className="py-20 bg-[#0A1628]">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Core Capabilities</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Core Capabilities</div>
             <h2 className="text-3xl md:text-4xl font-black text-white">The SSMPL Manufacturing Standard</h2>
           </motion.div>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#0d1f3c]/10">
             {[
               {
                 title: "Precision Manufacturing",
@@ -161,10 +161,10 @@ export default function InfrastructurePage() {
               },
             ].map((pillar) => (
               <motion.div key={pillar.title} variants={fadeUp} className="bg-[#0d1f3c] p-10 group hover:bg-[#0f2347] transition-colors" whileHover={{ y: -4 }}>
-                <div className="text-3xl font-black text-accent mb-2">//</div>
+                <div className="text-3xl font-black text-white mb-2">//</div>
                 <h3 className="font-black text-white text-xl mb-4">{pillar.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">{pillar.desc}</p>
-                <div className="border-l-2 border-accent pl-4 text-xs text-accent font-bold uppercase tracking-wider">{pillar.highlight}</div>
+                <div className="border-l-2 border-accent pl-4 text-xs text-white font-bold uppercase tracking-wider">{pillar.highlight}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -175,7 +175,7 @@ export default function InfrastructurePage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Our Facility</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Our Facility</div>
             <h2 className="text-3xl md:text-4xl font-black text-primary">Infrastructure Overview</h2>
           </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -188,7 +188,7 @@ export default function InfrastructurePage() {
               >
                 <div className="flex items-start gap-5 mb-5">
                   <div className="w-12 h-12 bg-muted border border-border flex items-center justify-center shrink-0 group-hover:border-accent group-hover:bg-accent/5 transition-colors">
-                    <section.icon size={22} className="text-primary group-hover:text-accent transition-colors" />
+                    <section.icon size={22} className="text-primary group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <h3 className="font-black text-primary text-lg">{section.title}</h3>
@@ -198,7 +198,7 @@ export default function InfrastructurePage() {
                 <ul className="space-y-2 pl-4 border-l-2 border-muted group-hover:border-accent transition-colors">
                   {section.points.map((point) => (
                     <li key={point} className="text-sm text-muted-foreground flex items-start gap-2">
-                      <ArrowRight size={12} className="text-accent mt-1 shrink-0" />{point}
+                      <ArrowRight size={12} className="text-white mt-1 shrink-0" />{point}
                     </li>
                   ))}
                 </ul>
@@ -212,7 +212,7 @@ export default function InfrastructurePage() {
       <section className="py-16 bg-muted border-y border-border">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-10">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-3">Our People</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-3">Our People</div>
             <h2 className="text-2xl font-black text-primary">Personnel Status</h2>
           </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
@@ -223,7 +223,7 @@ export default function InfrastructurePage() {
               { icon: Users, value: "5", label: "Korean Expats" },
             ].map((s) => (
               <motion.div key={s.label} variants={fadeUp} className="border border-border bg-card p-6 text-center hover:border-accent transition-colors">
-                <s.icon size={22} className="text-accent mx-auto mb-2" />
+                <s.icon size={22} className="text-white mx-auto mb-2" />
                 <div className="text-2xl font-black text-primary">{s.value}</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{s.label}</div>
               </motion.div>
@@ -236,20 +236,20 @@ export default function InfrastructurePage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">How We Work</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">How We Work</div>
             <h2 className="text-3xl md:text-4xl font-black text-primary">Production Process Flow</h2>
           </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-col md:flex-row items-stretch justify-between gap-0">
             {processSteps.map((step, i) => (
               <React.Fragment key={step.step}>
                 <motion.div variants={fadeUp} className="flex-1 bg-card border border-border p-6 text-center group hover:border-accent transition-colors" data-testid={`card-process-step-${i + 1}`}>
-                  <div className="text-3xl font-black text-accent/30 group-hover:text-accent/60 transition-colors mb-3">{step.step}</div>
+                  <div className="text-3xl font-black text-white/30 group-hover:text-white/60 transition-colors mb-3">{step.step}</div>
                   <div className="font-black text-primary text-xs mb-2 uppercase tracking-wider">{step.label}</div>
                   <div className="text-xs text-muted-foreground">{step.desc}</div>
                 </motion.div>
                 {i < processSteps.length - 1 && (
                   <div className="hidden md:flex items-center justify-center px-1">
-                    <ArrowRight size={16} className="text-accent" />
+                    <ArrowRight size={16} className="text-white" />
                   </div>
                 )}
               </React.Fragment>

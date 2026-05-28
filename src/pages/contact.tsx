@@ -60,7 +60,7 @@ export default function ContactPage() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Reach Us</div>
+            <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Reach Us</div>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-4">Contact Us</h1>
             <p className="text-gray-300 max-w-xl text-lg">
               Discuss your seat belt or safety component requirements with our team. Located near Kanchipuram — close to India's major OEM hubs.
@@ -76,7 +76,7 @@ export default function ContactPage() {
             {/* Contact Info */}
             <motion.div variants={fadeUp} className="lg:col-span-2 space-y-8">
               <div>
-                <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Get In Touch</div>
+                <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Get In Touch</div>
                 <h2 className="text-2xl font-black text-primary mb-4">Talk to Our Team</h2>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Whether you're a procurement officer from HMI, RNAIPL, or KMI, or a new OEM looking to qualify a supplier — we'd welcome the conversation.
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4 p-4 border border-border bg-card">
                     <div className="w-10 h-10 bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
-                      <item.icon size={16} className="text-accent" />
+                      <item.icon size={16} className="text-white" />
                     </div>
                     <div>
                       <div className="font-bold text-primary text-sm mb-1">{item.title}</div>
@@ -110,7 +110,7 @@ export default function ContactPage() {
 
               {/* OEM proximity */}
               <div className="border border-border bg-[#0A1628] p-6">
-                <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Strategic Location</div>
+                <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Strategic Location</div>
                 <div className="space-y-3">
                   {[
                     { label: "R&N Facility", distance: "7 km" },
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   ].map((loc) => (
                     <div key={loc.label} className="flex items-center justify-between border-b border-white/5 pb-2 last:border-0">
                       <span className="text-sm text-gray-300">{loc.label}</span>
-                      <span className="text-accent font-black text-sm">{loc.distance}</span>
+                      <span className="text-white font-black text-sm">{loc.distance}</span>
                     </div>
                   ))}
                 </div>
@@ -127,7 +127,7 @@ export default function ContactPage() {
 
               {/* Map Placeholder */}
               <div className="border border-border bg-muted h-44 flex flex-col items-center justify-center gap-2 text-muted-foreground">
-                <MapPin size={28} className="text-accent" />
+                <MapPin size={28} className="text-white" />
                 <div className="font-bold text-primary text-sm">Near Kanchipuram, Tamil Nadu</div>
                 <div className="text-xs text-muted-foreground">SSMPL India Plant</div>
               </div>
@@ -150,24 +150,24 @@ export default function ContactPage() {
                     <div>
                       <Label htmlFor="name" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Full Name *</Label>
                       <Input id="name" placeholder="Your full name" {...register("name")} data-testid="input-name" className="border-border focus:border-accent" />
-                      {errors.name && <p className="text-accent text-xs mt-1">{errors.name.message}</p>}
+                      {errors.name && <p className="text-white text-xs mt-1">{errors.name.message}</p>}
                     </div>
                     <div>
                       <Label htmlFor="company" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Company *</Label>
                       <Input id="company" placeholder="Your company name" {...register("company")} data-testid="input-company" className="border-border focus:border-accent" />
-                      {errors.company && <p className="text-accent text-xs mt-1">{errors.company.message}</p>}
+                      {errors.company && <p className="text-white text-xs mt-1">{errors.company.message}</p>}
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="email" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Email Address *</Label>
                       <Input id="email" type="email" placeholder="email@company.com" {...register("email")} data-testid="input-email" className="border-border focus:border-accent" />
-                      {errors.email && <p className="text-accent text-xs mt-1">{errors.email.message}</p>}
+                      {errors.email && <p className="text-white text-xs mt-1">{errors.email.message}</p>}
                     </div>
                     <div>
                       <Label htmlFor="phone" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Phone Number *</Label>
                       <Input id="phone" type="tel" placeholder="+91 XXXXX XXXXX" {...register("phone")} data-testid="input-phone" className="border-border focus:border-accent" />
-                      {errors.phone && <p className="text-accent text-xs mt-1">{errors.phone.message}</p>}
+                      {errors.phone && <p className="text-white text-xs mt-1">{errors.phone.message}</p>}
                     </div>
                   </div>
                   <div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                         <SelectItem value="general">General Inquiry / Supplier Qualification</SelectItem>
                       </SelectContent>
                     </Select>
-                    {errors.product && <p className="text-accent text-xs mt-1">{errors.product.message}</p>}
+                    {errors.product && <p className="text-white text-xs mt-1">{errors.product.message}</p>}
                   </div>
                   <div>
                     <Label htmlFor="message" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Message *</Label>
@@ -197,7 +197,7 @@ export default function ContactPage() {
                       data-testid="textarea-message"
                       className="border-border focus:border-accent resize-none"
                     />
-                    {errors.message && <p className="text-accent text-xs mt-1">{errors.message.message}</p>}
+                    {errors.message && <p className="text-white text-xs mt-1">{errors.message.message}</p>}
                   </div>
                   <Button type="submit" disabled={isSubmitting} className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-3 tracking-wide" data-testid="button-submit-inquiry">
                     {isSubmitting ? (
@@ -222,10 +222,10 @@ export default function ContactPage() {
       {/* QUICK CTA */}
       <section className="py-16 bg-[#0A1628]">
         <div className="container mx-auto px-4 text-center">
-          <div className="text-accent text-xs font-bold tracking-widest uppercase mb-4">Fast Track</div>
+          <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Fast Track</div>
           <h2 className="text-2xl font-black text-white mb-4">Need a Quick Response?</h2>
           <p className="text-gray-300 mb-6 max-w-md mx-auto text-sm">
-            For urgent OEM requirements, email us directly at <span className="text-accent font-semibold">info@ssmanufacturing.in</span>
+            For urgent OEM requirements, email us directly at <span className="text-white font-semibold">info@ssmanufacturing.in</span>
           </p>
           <a href="mailto:info@ssmanufacturing.in">
             <Button className="bg-accent hover:bg-accent/90 text-white font-semibold px-8" data-testid="button-email-direct">
