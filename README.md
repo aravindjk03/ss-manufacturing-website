@@ -28,23 +28,28 @@
 
   ## Deploy
 
-  ### Netlify
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/aravindjk03/ss-manufacturing-website)
+  ### Cloudflare Pages (Recommended)
 
-  Build command: `npm run build:deploy`  
+  1. Go to [dash.cloudflare.com](https://dash.cloudflare.com) → Workers & Pages → Pages
+  2. Connect this GitHub repository
+  3. Set **Build command**: `npm run build`
+  4. Set **Output directory**: `dist`
+  5. Click Deploy
+
+  ### Netlify
+
+  Build command: `npm run build`
   Publish directory: `dist`
 
   ### Vercel
-  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/aravindjk03/ss-manufacturing-website)
 
-  Build command: `npm run build:deploy`  
-  Output directory: `dist`
+  Import repository — zero config needed (auto-detected).
 
   ### Manual build
 
   ```bash
   npm install
-  npm run build:deploy
+  npm run build
   # Serve the dist/ folder on any static host
   ```
 
