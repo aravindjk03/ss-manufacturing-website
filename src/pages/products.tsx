@@ -120,7 +120,7 @@ export default function ProductsPage() {
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Product Range</div>
@@ -130,7 +130,7 @@ export default function ProductsPage() {
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {["ECE R16", "HMC ES/MS", "BMIR"].map((s) => (
-                <span key={s} className="text-xs border border-accent/40 text-white px-3 py-1 font-bold tracking-widest">{s}</span>
+                <span key={s} className="text-xs border border-white/40 text-white px-3 py-1 font-bold tracking-widest">{s}</span>
               ))}
             </div>
           </motion.div>
@@ -147,7 +147,7 @@ export default function ProductsPage() {
                 onClick={() => setActiveCategory(cat)}
                 data-testid={`button-filter-${cat.toLowerCase().replace(/ /g, "-")}`}
                 className={`px-4 py-2 text-xs font-bold tracking-wide border transition-colors uppercase ${
-                  activeCategory === cat ? "bg-accent text-white border-accent" : "border-border text-muted-foreground hover:border-accent hover:text-white bg-background"
+                  activeCategory === cat ? "bg-accent text-white border-accent" : "border-border text-muted-foreground hover:border-white hover:text-white bg-background"
                 }`}
               >
                 {cat}
@@ -167,13 +167,13 @@ export default function ProductsPage() {
             {filtered.map((product) => (
               <motion.div
                 key={product.id} variants={fadeUp}
-                className="border border-border bg-card overflow-hidden group hover:border-accent transition-all duration-300"
+                className="border border-border bg-card overflow-hidden group hover:border-white transition-all duration-300"
                 data-testid={`card-product-${product.id}`}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3">
                   <div className={`bg-gradient-to-br ${product.color} p-10 flex flex-col justify-between min-h-48`}>
                     <div>
-                      <div className="inline-block text-xs text-white border border-accent/40 bg-accent/10 px-3 py-1 font-bold tracking-wider uppercase mb-6">
+                      <div className="inline-block text-xs text-white border border-white/40 bg-white/10 px-3 py-1 font-bold tracking-wider uppercase mb-6">
                         {product.category}
                       </div>
                       <product.icon size={44} className="text-white/80 mb-4" />
@@ -184,7 +184,7 @@ export default function ProductsPage() {
                       <div className="text-xs text-white/50 uppercase tracking-wider">{product.lines}</div>
                       <div className="flex flex-wrap gap-1 mt-1">
                         {product.standards.map((s) => (
-                          <span key={s} className="text-[10px] border border-accent/40 text-white px-2 py-0.5 font-bold tracking-wider">{s}</span>
+                          <span key={s} className="text-[10px] border border-white/40 text-white px-2 py-0.5 font-bold tracking-wider">{s}</span>
                         ))}
                       </div>
                     </div>
@@ -195,7 +195,7 @@ export default function ProductsPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                       <div>
                         <h4 className="font-black text-primary text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
-                          <span className="w-4 h-0.5 bg-accent inline-block" />Key Features
+                          <span className="w-4 h-0.5 bg-white inline-block" />Key Features
                         </h4>
                         <ul className="space-y-2">
                           {product.features.map((f) => (
@@ -207,12 +207,12 @@ export default function ProductsPage() {
                       </div>
                       <div>
                         <h4 className="font-black text-primary text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
-                          <span className="w-4 h-0.5 bg-accent inline-block" />Applications
+                          <span className="w-4 h-0.5 bg-white inline-block" />Applications
                         </h4>
                         <ul className="space-y-2 mb-6">
                           {product.applications.map((a) => (
                             <li key={a} className="flex items-start gap-2 text-xs text-muted-foreground">
-                              <span className="mt-1.5 w-1.5 h-1.5 bg-accent shrink-0" />{a}
+                              <span className="mt-1.5 w-1.5 h-1.5 bg-white shrink-0" />{a}
                             </li>
                           ))}
                         </ul>
@@ -243,7 +243,7 @@ export default function ProductsPage() {
           </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {testEquipment.map((eq) => (
-              <motion.div key={eq} variants={fadeUp} className="border border-white/10 bg-[#0d1f3c]/5 p-4 text-center group hover:border-accent/40 transition-colors">
+              <motion.div key={eq} variants={fadeUp} className="border border-white/10 bg-[#0d1f3c]/5 p-4 text-center group hover:border-white/40 transition-colors">
                 <TestTube size={18} className="text-white mx-auto mb-2" />
                 <div className="text-xs text-gray-300 font-medium leading-tight">{eq}</div>
               </motion.div>

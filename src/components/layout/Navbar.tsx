@@ -74,7 +74,7 @@ export function Navbar() {
               <div
                 key={cert.code}
                 title={cert.label}
-                className="shrink-0 flex items-center gap-1 px-2 py-0.5 border border-accent/25 bg-accent/5 hover:bg-accent/10 hover:border-accent/50 transition-colors cursor-default"
+                className="shrink-0 flex items-center gap-1 px-2 py-0.5 border border-white/25 bg-white/5 hover:bg-white/10 hover:border-white/50 transition-colors cursor-default"
               >
                 <span className="text-[9px] font-black text-white tracking-wider">{cert.code}</span>
               </div>
@@ -106,7 +106,7 @@ export function Navbar() {
                 {isActive && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-white"
                     initial={false}
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />

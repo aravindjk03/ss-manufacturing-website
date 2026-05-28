@@ -23,7 +23,7 @@ export function PageLayout({ children }: { children: React.ReactNode }) {
   }, [location]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background selection:bg-accent selection:text-white">
+    <div className="min-h-screen flex flex-col bg-background selection:bg-white selection:text-white">
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main

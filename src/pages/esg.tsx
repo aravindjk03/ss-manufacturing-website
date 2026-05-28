@@ -23,7 +23,7 @@ function ProgressBar({ value, label, start }: { value: number; label: string; st
       </div>
       <div className="h-1.5 bg-[#0d1f3c]/10">
         <div
-          className="h-full bg-accent transition-all duration-1500 ease-out"
+          className="h-full bg-white transition-all duration-1500 ease-out"
           style={{ width: `${width}%`, transition: "width 1.5s ease-out" }}
         />
       </div>
@@ -198,7 +198,7 @@ export default function ESGPage() {
                 className="bg-[#0d1f3c] p-8 group hover:bg-[#0f2347] transition-colors"
                 whileHover={{ y: -4 }}
               >
-                <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <div className="w-12 h-12 bg-white/10 border border-white/20 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
                   <item.icon size={22} className="text-white" />
                 </div>
                 <h3 className="font-bold text-white text-base mb-3">{item.title}</h3>
@@ -271,7 +271,7 @@ export default function ESGPage() {
               { label: "ISO 9001:2015", sub: "Quality Management System", status: "In Progress", color: "border-yellow-400 bg-yellow-50 text-yellow-700" },
               { label: "ISO 14001:2015", sub: "Environmental Management", status: "In Progress", color: "border-green-400 bg-green-50 text-green-700" },
               { label: "IATF 16949", sub: "Automotive Quality Standard", status: "Roadmap 2026", color: "border-blue-400 bg-blue-50 text-blue-700" },
-              { label: "Customer Compliance", sub: "OEM-Specific Standards", status: "Compliant", color: "border-accent bg-red-50 text-white" },
+              { label: "Customer Compliance", sub: "OEM-Specific Standards", status: "Compliant", color: "border-white bg-white/10 text-white" },
             ].map((cert) => (
               <motion.div
                 key={cert.label}

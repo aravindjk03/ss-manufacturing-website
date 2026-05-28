@@ -103,7 +103,7 @@ export default function InfrastructurePage() {
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Manufacturing Capabilities</div>
@@ -116,7 +116,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* KEY METRICS */}
-      <section className="py-12 bg-accent">
+      <section className="py-12 bg-[#0d1f3c]">
         <div className="container mx-auto px-4">
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -164,7 +164,7 @@ export default function InfrastructurePage() {
                 <div className="text-3xl font-black text-white mb-2">//</div>
                 <h3 className="font-black text-white text-xl mb-4">{pillar.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">{pillar.desc}</p>
-                <div className="border-l-2 border-accent pl-4 text-xs text-white font-bold uppercase tracking-wider">{pillar.highlight}</div>
+                <div className="border-l-2 border-white pl-4 text-xs text-white font-bold uppercase tracking-wider">{pillar.highlight}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -182,12 +182,12 @@ export default function InfrastructurePage() {
             {sections.map((section) => (
               <motion.div
                 key={section.title} variants={fadeUp}
-                className="border border-border bg-card p-8 group hover:border-accent transition-colors"
+                className="border border-border bg-card p-8 group hover:border-white transition-colors"
                 whileHover={{ y: -3 }}
                 data-testid={`card-infra-${section.title.toLowerCase().replace(/ /g, "-")}`}
               >
                 <div className="flex items-start gap-5 mb-5">
-                  <div className="w-12 h-12 bg-muted border border-border flex items-center justify-center shrink-0 group-hover:border-accent group-hover:bg-accent/5 transition-colors">
+                  <div className="w-12 h-12 bg-muted border border-border flex items-center justify-center shrink-0 group-hover:border-white group-hover:bg-white/5 transition-colors">
                     <section.icon size={22} className="text-primary group-hover:text-white transition-colors" />
                   </div>
                   <div>
@@ -195,7 +195,7 @@ export default function InfrastructurePage() {
                     <p className="text-sm text-muted-foreground mt-1">{section.desc}</p>
                   </div>
                 </div>
-                <ul className="space-y-2 pl-4 border-l-2 border-muted group-hover:border-accent transition-colors">
+                <ul className="space-y-2 pl-4 border-l-2 border-muted group-hover:border-white transition-colors">
                   {section.points.map((point) => (
                     <li key={point} className="text-sm text-muted-foreground flex items-start gap-2">
                       <ArrowRight size={12} className="text-white mt-1 shrink-0" />{point}
@@ -222,7 +222,7 @@ export default function InfrastructurePage() {
               { icon: Users, value: "480", label: "Production Workers" },
               { icon: Users, value: "5", label: "Korean Expats" },
             ].map((s) => (
-              <motion.div key={s.label} variants={fadeUp} className="border border-border bg-card p-6 text-center hover:border-accent transition-colors">
+              <motion.div key={s.label} variants={fadeUp} className="border border-border bg-card p-6 text-center hover:border-white transition-colors">
                 <s.icon size={22} className="text-white mx-auto mb-2" />
                 <div className="text-2xl font-black text-primary">{s.value}</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{s.label}</div>
@@ -242,7 +242,7 @@ export default function InfrastructurePage() {
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-col md:flex-row items-stretch justify-between gap-0">
             {processSteps.map((step, i) => (
               <React.Fragment key={step.step}>
-                <motion.div variants={fadeUp} className="flex-1 bg-card border border-border p-6 text-center group hover:border-accent transition-colors" data-testid={`card-process-step-${i + 1}`}>
+                <motion.div variants={fadeUp} className="flex-1 bg-card border border-border p-6 text-center group hover:border-white transition-colors" data-testid={`card-process-step-${i + 1}`}>
                   <div className="text-3xl font-black text-white/30 group-hover:text-white/60 transition-colors mb-3">{step.step}</div>
                   <div className="font-black text-primary text-xs mb-2 uppercase tracking-wider">{step.label}</div>
                   <div className="text-xs text-muted-foreground">{step.desc}</div>

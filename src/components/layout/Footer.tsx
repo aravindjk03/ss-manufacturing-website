@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Linkedin, Twitter, ArrowRight } from "lucide-react
 
 export function Footer() {
   return (
-    <footer className="bg-[#0A1628] text-white border-t-4 border-accent pt-16 pb-8">
+    <footer className="bg-[#0A1628] text-white border-t-4 border-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
@@ -79,7 +79,7 @@ export function Footer() {
             <div className="space-y-2">
               {["Hyundai Motor India (HMI)", "Renault Nissan (RNAIPL)", "Kia Motors India (KMI)"].map((c) => (
                 <div key={c} className="text-sm text-gray-400 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-accent shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-white shrink-0" />
                   {c}
                 </div>
               ))}
@@ -88,17 +88,17 @@ export function Footer() {
               <h3 className="font-bold text-sm uppercase tracking-widest text-white/60">Standards</h3>
               <div className="flex flex-wrap gap-2">
                 {["ECE R16", "HMC ES/MS", "BMIR"].map((s) => (
-                  <span key={s} className="text-xs border border-accent/30 text-white px-2 py-0.5 font-semibold tracking-wide">
+                  <span key={s} className="text-xs border border-white/30 text-white px-2 py-0.5 font-semibold tracking-wide">
                     {s}
                   </span>
                 ))}
               </div>
             </div>
             <div className="flex gap-3 pt-2">
-              <a href="#" className="w-9 h-9 bg-[#0d1f3c]/5 hover:bg-accent transition-colors flex items-center justify-center text-white" aria-label="LinkedIn">
+              <a href="#" className="w-9 h-9 bg-[#0d1f3c]/5 hover:bg-white transition-colors flex items-center justify-center text-white" aria-label="LinkedIn">
                 <Linkedin size={16} />
               </a>
-              <a href="#" className="w-9 h-9 bg-[#0d1f3c]/5 hover:bg-accent transition-colors flex items-center justify-center text-white" aria-label="Twitter">
+              <a href="#" className="w-9 h-9 bg-[#0d1f3c]/5 hover:bg-white transition-colors flex items-center justify-center text-white" aria-label="Twitter">
                 <Twitter size={16} />
               </a>
             </div>

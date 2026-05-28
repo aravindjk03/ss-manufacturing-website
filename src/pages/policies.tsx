@@ -79,7 +79,7 @@ export default function PoliciesPage() {
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Governance</div>
@@ -119,12 +119,12 @@ export default function PoliciesPage() {
                 <AccordionItem
                   key={policy.id}
                   value={policy.id}
-                  className="border border-border bg-card hover:border-accent transition-colors data-[state=open]:border-accent"
+                  className="border border-border bg-card hover:border-white transition-colors data-[state=open]:border-white"
                   data-testid={`accordion-policy-${policy.id}`}
                 >
                   <AccordionTrigger className="px-6 py-5 hover:no-underline group">
                     <div className="flex items-center gap-4 text-left">
-                      <div className="w-10 h-10 bg-muted border border-border flex items-center justify-center shrink-0 group-data-[state=open]:bg-accent group-data-[state=open]:border-accent transition-colors">
+                      <div className="w-10 h-10 bg-muted border border-border flex items-center justify-center shrink-0 group-data-[state=open]:bg-white group-data-[state=open]:border-white transition-colors">
                         <policy.icon size={18} className="text-muted-foreground group-data-[state=open]:text-white transition-colors" />
                       </div>
                       <div>
@@ -157,7 +157,7 @@ export default function PoliciesPage() {
       {/* NOTE */}
       <section className="py-12 bg-[#0A1628]">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-6">
+          <div className="w-12 h-12 bg-white/10 border border-white/20 flex items-center justify-center mx-auto mb-6">
             <FileText size={22} className="text-white" />
           </div>
           <h3 className="text-xl font-black text-white mb-4">Policy Updates & Availability</h3>

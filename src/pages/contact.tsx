@@ -57,7 +57,7 @@ export default function ContactPage() {
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Reach Us</div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                   { icon: Clock, title: "Business Hours", content: <>Monday — Saturday<br />9:00 AM — 6:00 PM IST</>, sub: null },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4 p-4 border border-border bg-card">
-                    <div className="w-10 h-10 bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
                       <item.icon size={16} className="text-white" />
                     </div>
                     <div>
@@ -149,24 +149,24 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Full Name *</Label>
-                      <Input id="name" placeholder="Your full name" {...register("name")} data-testid="input-name" className="border-border focus:border-accent" />
+                      <Input id="name" placeholder="Your full name" {...register("name")} data-testid="input-name" className="border-border focus:border-white" />
                       {errors.name && <p className="text-white text-xs mt-1">{errors.name.message}</p>}
                     </div>
                     <div>
                       <Label htmlFor="company" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Company *</Label>
-                      <Input id="company" placeholder="Your company name" {...register("company")} data-testid="input-company" className="border-border focus:border-accent" />
+                      <Input id="company" placeholder="Your company name" {...register("company")} data-testid="input-company" className="border-border focus:border-white" />
                       {errors.company && <p className="text-white text-xs mt-1">{errors.company.message}</p>}
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="email" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Email Address *</Label>
-                      <Input id="email" type="email" placeholder="email@company.com" {...register("email")} data-testid="input-email" className="border-border focus:border-accent" />
+                      <Input id="email" type="email" placeholder="email@company.com" {...register("email")} data-testid="input-email" className="border-border focus:border-white" />
                       {errors.email && <p className="text-white text-xs mt-1">{errors.email.message}</p>}
                     </div>
                     <div>
                       <Label htmlFor="phone" className="text-primary font-semibold text-xs uppercase tracking-wider mb-2 block">Phone Number *</Label>
-                      <Input id="phone" type="tel" placeholder="+91 XXXXX XXXXX" {...register("phone")} data-testid="input-phone" className="border-border focus:border-accent" />
+                      <Input id="phone" type="tel" placeholder="+91 XXXXX XXXXX" {...register("phone")} data-testid="input-phone" className="border-border focus:border-white" />
                       {errors.phone && <p className="text-white text-xs mt-1">{errors.phone.message}</p>}
                     </div>
                   </div>
@@ -195,7 +195,7 @@ export default function ContactPage() {
                       rows={5}
                       {...register("message")}
                       data-testid="textarea-message"
-                      className="border-border focus:border-accent resize-none"
+                      className="border-border focus:border-white resize-none"
                     />
                     {errors.message && <p className="text-white text-xs mt-1">{errors.message.message}</p>}
                   </div>

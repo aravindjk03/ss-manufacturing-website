@@ -39,7 +39,7 @@ export default function AboutPage() {
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white" />
         <div className="relative container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">SSMPL — Who We Are</div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
                     { label: "Factory Floor", value: "6,710 sq.mt" },
                     { label: "Amenities", value: "800 sq.mt" },
                   ].map((s) => (
-                    <div key={s.label} className="border-l-2 border-accent pl-3">
+                    <div key={s.label} className="border-l-2 border-white pl-3">
                       <div className="font-black text-primary text-base">{s.value}</div>
                       <div className="text-xs text-muted-foreground uppercase tracking-wider">{s.label}</div>
                     </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
               </div>
 
               {/* Location */}
-              <div className="border-l-4 border-accent pl-6 py-2">
+              <div className="border-l-4 border-white pl-6 py-2">
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin size={16} className="text-white" />
                   <h3 className="font-black text-primary">Location</h3>
@@ -127,7 +127,7 @@ export default function AboutPage() {
                     "Maintain ethical manufacturing throughout our supply chain",
                   ].map((m) => (
                     <li key={m} className="flex items-start gap-3 text-sm text-gray-300">
-                      <span className="mt-1.5 w-1.5 h-1.5 bg-accent shrink-0" />
+                      <span className="mt-1.5 w-1.5 h-1.5 bg-white shrink-0" />
                       {m}
                     </li>
                   ))}
@@ -139,7 +139,7 @@ export default function AboutPage() {
       </section>
 
       {/* INVESTMENT & PERSONNEL */}
-      <section className="py-16 bg-accent">
+      <section className="py-16 bg-[#0d1f3c]">
         <div className="container mx-auto px-4">
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -167,7 +167,7 @@ export default function AboutPage() {
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#0d1f3c]/10">
             {values.map((v) => (
               <motion.div key={v.title} variants={fadeUp} whileHover={{ y: -4 }} className="bg-[#0d1f3c] p-8 group hover:bg-[#0f2347] transition-colors" data-testid={`card-value-${v.title.toLowerCase()}`}>
-                <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <div className="w-12 h-12 bg-white/10 border border-white/20 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
                   <v.icon size={22} className="text-white" />
                 </div>
                 <h3 className="font-bold text-white text-lg mb-2">{v.title}</h3>
@@ -191,17 +191,17 @@ export default function AboutPage() {
               {timeline.map((item, i) => (
                 <motion.div key={item.year} variants={fadeUp} className={`relative flex items-start gap-8 pb-10 flex-row`}>
                   <div className="md:hidden absolute left-8 -translate-x-1/2 z-10">
-                    <div className="w-9 h-9 bg-accent text-white flex items-center justify-center border-4 border-background">
+                    <div className="w-9 h-9 bg-white text-white flex items-center justify-center border-4 border-background">
                       <Star size={12} />
                     </div>
                   </div>
                   <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-10">
-                    <div className="w-9 h-9 bg-accent text-white flex items-center justify-center border-4 border-background">
+                    <div className="w-9 h-9 bg-white text-white flex items-center justify-center border-4 border-background">
                       <Star size={12} />
                     </div>
                   </div>
                   <div className={`pl-16 md:pl-0 w-full md:w-[calc(50%-2.5rem)] ${i % 2 === 0 ? "md:pr-10 md:text-right" : "md:pl-10 md:ml-auto"}`}>
-                    <div className="bg-card border border-border p-5 hover:border-accent transition-colors">
+                    <div className="bg-card border border-border p-5 hover:border-white transition-colors">
                       <div className="text-white font-black text-xl mb-1">{item.year}</div>
                       <div className="font-bold text-primary text-sm mb-1">{item.title}</div>
                       <p className="text-xs text-muted-foreground">{item.desc}</p>

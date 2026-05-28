@@ -56,7 +56,7 @@ export default function HomePage() {
         {/* Decorative seat belt image */}
         <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 bg-no-repeat bg-center bg-contain hidden lg:block"
           style={{ backgroundImage: "url('/seatbelt-hero.png')" }} />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white" />
         <div className="relative container mx-auto px-4 pt-24 pb-16">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -64,7 +64,7 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 text-white px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/30 text-white px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-6">
               <Cog size={12} />
               Near Kanchipuram, Tamil Nadu, India
             </div>
@@ -140,7 +140,7 @@ export default function HomePage() {
                 { icon: Award, label: "Annual Capacity", value: "1.2M Units" },
                 { icon: CheckCircle, label: "OEM Customers", value: "HMI · RNAIPL · KMI" },
               ].map((item) => (
-                <div key={item.label} className="border border-border bg-card p-6 group hover:border-accent transition-colors">
+                <div key={item.label} className="border border-border bg-card p-6 group hover:border-white transition-colors">
                   <item.icon size={26} className="text-white mb-3" />
                   <div className="text-lg font-black text-primary leading-tight">{item.value}</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{item.label}</div>
@@ -175,7 +175,7 @@ export default function HomePage() {
                 className="bg-[#0d1f3c] p-8 group hover:bg-[#0f2347] transition-colors border-b border-r border-white/5"
                 whileHover={{ y: -4 }}
               >
-                <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <div className="w-12 h-12 bg-white/10 border border-white/20 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
                   <item.icon size={22} className="text-white" />
                 </div>
                 <h3 className="font-bold text-white text-lg mb-3">{item.title}</h3>
@@ -211,13 +211,13 @@ export default function HomePage() {
             ].map((product) => (
               <motion.div
                 key={product.title} variants={fadeUp}
-                className="border border-border group hover:border-accent transition-all duration-300 bg-card overflow-hidden"
+                className="border border-border group hover:border-white transition-all duration-300 bg-card overflow-hidden"
                 whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(10,22,40,0.1)" }}
                 data-testid={`card-product-${product.title.toLowerCase().replace(/ /g, "-")}`}
               >
-                <div className="h-2 bg-gradient-to-r from-primary to-accent group-hover:from-accent group-hover:to-primary transition-all duration-300" />
+                <div className="h-2 bg-gradient-to-r from-primary to-white group-hover:from-white group-hover:to-primary transition-all duration-300" />
                 <div className="p-8">
-                  <div className="inline-block text-xs text-white border border-accent/30 bg-accent/5 px-3 py-1 font-semibold tracking-wider uppercase mb-4">{product.tag}</div>
+                  <div className="inline-block text-xs text-white border border-white/30 bg-white/5 px-3 py-1 font-semibold tracking-wider uppercase mb-4">{product.tag}</div>
                   <product.icon size={30} className="text-primary mb-4 group-hover:text-white transition-colors" />
                   <h3 className="font-black text-xl text-primary mb-2">{product.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-3">{product.desc}</p>
@@ -238,7 +238,7 @@ export default function HomePage() {
       <section className="py-24 bg-[#0A1628] relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg opacity-50" />
         {/* Top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-white" />
         <div className="relative container mx-auto px-4">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
             <div className="text-white text-xs font-bold tracking-widest uppercase mb-4">Trusted By India's Top OEMs</div>
@@ -349,7 +349,7 @@ export default function HomePage() {
             </div>
             <div className="flex gap-2">
               {["ECE R16", "HMC ES/MS", "BMIR"].map((s) => (
-                <span key={s} className="text-[10px] border border-accent/30 text-white px-2 py-1 font-bold tracking-widest">{s}</span>
+                <span key={s} className="text-[10px] border border-white/30 text-white px-2 py-1 font-bold tracking-widest">{s}</span>
               ))}
             </div>
           </motion.div>
@@ -377,7 +377,7 @@ export default function HomePage() {
                   "Fair wages and employee welfare programmes",
                   "Compliance with ECE R16 and international safety standards",
                 ].map((item) => (
-                  <div key={item} className="flex items-start gap-3 p-3 bg-muted border-l-2 border-accent text-sm text-muted-foreground">
+                  <div key={item} className="flex items-start gap-3 p-3 bg-muted border-l-2 border-white text-sm text-muted-foreground">
                     <CheckCircle size={16} className="text-white mt-0.5 shrink-0" />
                     {item}
                   </div>
@@ -395,7 +395,7 @@ export default function HomePage() {
                 { label: "Social", value: "S", color: "bg-blue-700", desc: "600+ workers, safety programmes, diversity & inclusion" },
                 { label: "Governance", value: "G", color: "bg-purple-700", desc: "Ethical practices, transparency, ECE R16 compliance" },
               ].map((pillar) => (
-                <motion.div key={pillar.label} className="flex items-center gap-6 p-8 bg-card border border-border hover:border-accent transition-colors" whileHover={{ x: 4 }}>
+                <motion.div key={pillar.label} className="flex items-center gap-6 p-8 bg-card border border-border hover:border-white transition-colors" whileHover={{ x: 4 }}>
                   <div className={`w-16 h-16 ${pillar.color} flex items-center justify-center text-white font-black text-2xl shrink-0`}>{pillar.value}</div>
                   <div>
                     <div className="font-black text-xl text-primary">{pillar.label}</div>
@@ -439,7 +439,7 @@ export default function HomePage() {
                 <div className={`text-xl font-black text-primary mb-3`}>
                   {cert.code.includes(" ") ? cert.code.split(" ")[1] : ""}
                 </div>
-                <div className="w-8 h-0.5 bg-accent mx-auto mb-3" />
+                <div className="w-8 h-0.5 bg-white mx-auto mb-3" />
                 <p className="text-[10px] text-muted-foreground uppercase tracking-wide leading-tight">{cert.label}</p>
               </motion.div>
             ))}
@@ -448,7 +448,7 @@ export default function HomePage() {
       </section>
 
       {/* STATISTICS */}
-      <section className="py-20 bg-accent">
+      <section className="py-20 bg-[#0d1f3c]">
         <div className="container mx-auto px-4">
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <StatCounter value={600} suffix="+" label="Total Personnel" />
