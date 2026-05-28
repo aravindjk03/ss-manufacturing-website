@@ -275,7 +275,7 @@ export default function HomePage() {
                 distance: "7 km",
                 distanceLabel: "From R&N Facility",
                 products: ["Seat Belt Assemblies", "Retractors", "Webbing"],
-                accentBorder: "border-t-4 border-t-accent",
+                accentBorder: "border-t-4 border-t-white",
               },
               {
                 code: "KMI",
@@ -302,8 +302,8 @@ export default function HomePage() {
                   <img
                     src={c.logo}
                     alt={`${c.name} logo`}
-                    className="max-h-full max-w-full object-contain"
-                    style={{ maxHeight: "96px" }}
+                    className="max-h-full max-w-full object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
+                    style={{ maxHeight: "80px" }}
                   />
                 </div>
 
