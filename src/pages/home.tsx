@@ -95,7 +95,7 @@ export default function HomePage() {
             {/* Customer badges */}
             <div className="flex flex-wrap gap-3 mt-10">
               <div className="text-xs text-white/40 uppercase tracking-widest self-center">Supplying:</div>
-              {["HMI", "RNAIPL", "KMI"].map((c) => (
+              {["HMI", "RNAIPL", "KMI", "MOBIS"].map((c) => (
                 <div key={c} className="px-3 py-1.5 border border-white/20 text-white/70 text-xs font-bold tracking-widest">
                   {c}
                 </div>
@@ -251,59 +251,63 @@ export default function HomePage() {
           </motion.div>
 
           {/* Customer cards — large format */}
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-white/10">
             {[
               {
                 code: "HMI",
                 name: "Hyundai Motor India",
                 location: "Sriperumbudur, Tamil Nadu",
-                logo: "/logos/hmi-logo.png",
-                logoBg: "bg-[#0d1f3c]",
+                logo: "/logos/hmi-logo.jpg",
                 desc: "Tier-1 safety component supplier for Hyundai's India manufacturing operations. Supplying retractor and buckle assemblies across B and C segment vehicle lines.",
                 distance: "40 km",
                 distanceLabel: "From SSMPL",
                 products: ["Retractors", "Buckle Systems", "Height Adjusters"],
-                accentBorder: "border-t-4 border-t-blue-500",
               },
               {
                 code: "RNAIPL",
                 name: "Renault Nissan Automotive India",
                 location: "Oragadam, Tamil Nadu",
-                logo: "/logos/rnaipl-logo.png",
-                logoBg: "bg-[#0d1f3c]",
+                logo: "/logos/rnaipl-logo.jpg",
                 desc: "Premier seat belt assembly supplier for Renault-Nissan's Chennai plant. XBA model first delivered in 2015 — a decade-long supply partnership.",
                 distance: "7 km",
                 distanceLabel: "From R&N Facility",
                 products: ["Seat Belt Assemblies", "Retractors", "Webbing"],
-                accentBorder: "border-t-4 border-t-white",
               },
               {
                 code: "KMI",
                 name: "Kia Motors India",
                 location: "Anantapur, Andhra Pradesh",
                 logo: "/logos/kmi-logo.png",
-                logoBg: "bg-[#0d1f3c]",
                 desc: "Safety systems partner for Kia's rapidly growing India lineup. Providing OEM-grade buckle and retractor systems across Kia's India vehicle range.",
                 distance: "—",
                 distanceLabel: "Pan-India Supply",
                 products: ["Buckle Systems", "Retractors"],
-                accentBorder: "border-t-4 border-t-green-500",
+              },
+              {
+                code: "MOBIS",
+                name: "Hyundai Mobis",
+                location: "Chennai, Tamil Nadu",
+                logo: "/logos/mobis-logo.png",
+                desc: "Tier-1 module integrator for the Hyundai-Kia group. Strategic supplier of seat belt sub-assemblies and safety components for OEM module programs.",
+                distance: "—",
+                distanceLabel: "OEM Tier-1 Partner",
+                products: ["Seat Belt Sub-assemblies", "Buckle Systems"],
               },
             ].map((c, i) => (
               <motion.div
                 key={c.code}
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
-                className={`relative bg-[#0d1f3c] group hover:bg-[#0f2347] transition-all duration-300 flex flex-col ${c.accentBorder} ${i < 2 ? "md:border-r border-white/10" : ""}`}
+                className={`relative bg-[#0d1f3c] group hover:bg-[#0f2347] transition-all duration-300 flex flex-col border-t-4 border-t-white ${i < 3 ? "lg:border-r border-white/10" : ""} ${i % 2 === 0 ? "sm:border-r border-white/10 lg:border-r" : ""}`}
                 data-testid={`card-customer-${c.code.toLowerCase()}`}
               >
-                {/* Logo area */}
-                <div className="h-44 flex items-center justify-center bg-[#0d1f3c] border-b border-white/10 overflow-hidden p-6">
+                {/* Logo area — white strip to show authentic brand colors */}
+                <div className="h-40 flex items-center justify-center bg-white border-b border-white/10 overflow-hidden p-5">
                   <img
                     src={c.logo}
                     alt={`${c.name} logo`}
-                    className="max-h-full max-w-full object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
-                    style={{ maxHeight: "80px" }}
+                    className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    style={{ maxHeight: "90px" }}
                   />
                 </div>
 
@@ -345,7 +349,7 @@ export default function HomePage() {
           {/* Bottom trust strip */}
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-10 border border-white/10 bg-[#0d1f3c]/5 px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-sm text-gray-400">
-              <span className="text-white font-bold">3 OEM customers</span> &nbsp;·&nbsp; Standards: ECE R16, HMC ES/MS, BMIR &nbsp;·&nbsp; 1.2M units/year capacity
+              <span className="text-white font-bold">4 OEM customers</span> &nbsp;·&nbsp; Standards: ECE R16, HMC ES/MS, BMIR &nbsp;·&nbsp; 1.2M units/year capacity
             </div>
             <div className="flex gap-2">
               {["ECE R16", "HMC ES/MS", "BMIR"].map((s) => (
