@@ -95,7 +95,7 @@ export default function HomePage() {
             {/* Customer badges */}
             <div className="flex flex-wrap gap-3 mt-10">
               <div className="text-xs text-white/40 uppercase tracking-widest self-center">Supplying:</div>
-              {["HMI", "RNAIPL", "KMI", "MOBIS"].map((c) => (
+              {["HMI", "RNAIPL", "KMI", "MOBIS", "ASHOK LEYLAND"].map((c) => (
                 <div key={c} className="px-3 py-1.5 border border-white/20 text-white/70 text-xs font-bold tracking-widest">
                   {c}
                 </div>
@@ -251,7 +251,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Customer cards — large format */}
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-white/10">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 border border-white/10">
             {[
               {
                 code: "HMI",
@@ -293,12 +293,22 @@ export default function HomePage() {
                 distanceLabel: "OEM Tier-1 Partner",
                 products: ["Seat Belt Sub-assemblies", "Buckle Systems"],
               },
+              {
+                code: "ASHOK LEYLAND",
+                name: "Ashok Leyland",
+                location: "Ennore, Tamil Nadu",
+                logo: "/logos/ashok-leyland-logo.png",
+                desc: "India's leading commercial vehicle manufacturer. Supplying heavy-duty seat belt systems and safety assemblies for truck and bus platforms.",
+                distance: "—",
+                distanceLabel: "Commercial Vehicle Partner",
+                products: ["Heavy-Duty Seat Belts", "Buckle Systems", "Retractors"],
+              },
             ].map((c, i) => (
               <motion.div
                 key={c.code}
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
-                className={`relative bg-[#0d1f3c] group hover:bg-[#0f2347] transition-all duration-300 flex flex-col border-t-4 border-t-white ${i < 3 ? "lg:border-r border-white/10" : ""} ${i % 2 === 0 ? "sm:border-r border-white/10 lg:border-r" : ""}`}
+                className={`relative bg-[#0d1f3c] group hover:bg-[#0f2347] transition-all duration-300 flex flex-col border-t-4 border-t-white ${i < 4 ? "lg:border-r border-white/10" : ""} ${i % 2 === 0 ? "sm:border-r border-white/10" : ""}`}
                 data-testid={`card-customer-${c.code.toLowerCase()}`}
               >
                 {/* Logo area — white strip to show authentic brand colors */}
@@ -349,7 +359,7 @@ export default function HomePage() {
           {/* Bottom trust strip */}
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-10 border border-white/10 bg-[#0d1f3c]/5 px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-sm text-gray-400">
-              <span className="text-white font-bold">4 OEM customers</span> &nbsp;·&nbsp; Standards: ECE R16, HMC ES/MS, BMIR &nbsp;·&nbsp; 1.2M units/year capacity
+              <span className="text-white font-bold">5 OEM customers</span> &nbsp;·&nbsp; Standards: ECE R16, HMC ES/MS, BMIR &nbsp;·&nbsp; 1.2M units/year capacity
             </div>
             <div className="flex gap-2">
               {["ECE R16", "HMC ES/MS", "BMIR"].map((s) => (

@@ -77,7 +77,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-bold text-sm uppercase tracking-widest text-white/60">Key Customers</h3>
             <div className="space-y-2">
-              {["Hyundai Motor India (HMI)", "Renault Nissan (RNAIPL)", "Kia Motors India (KMI)", "Hyundai Mobis"].map((c) => (
+              {["Hyundai Motor India (HMI)", "Renault Nissan (RNAIPL)", "Kia Motors India (KMI)", "Hyundai Mobis", "Ashok Leyland"].map((c) => (
                 <div key={c} className="text-sm text-gray-400 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-white shrink-0" />
                   {c}
