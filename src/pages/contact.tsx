@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -47,6 +48,12 @@ export default function ContactPage() {
 
   return (
     <PageLayout>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with SS Manufacturing Private Limited — Chennai-area automotive safety component manufacturer. OEM inquiries, supplier partnerships, and corporate communication welcome."
+        path="/contact"
+        keywords="contact SSMPL, automotive supplier inquiry, OEM partnership, Chennai manufacturer contact, Kanchipuram"
+      />
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />

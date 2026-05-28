@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ShieldCheck, Cog, Package, Layers, ChevronRight, Download, ArrowRight, TestTube } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
@@ -110,6 +111,12 @@ export default function ProductsPage() {
 
   return (
     <PageLayout>
+      <SEO
+        title="Products"
+        description="SSMPL product range — automotive seat belts, retractors, buckles, and safety assemblies engineered for OEMs and Tier-1 suppliers. IATF 16949 certified manufacturing with rigorous testing."
+        path="/products"
+        keywords="automotive seat belts, seat belt retractors, seat belt buckles, vehicle safety assemblies, OEM components, automotive parts India"
+      />
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />

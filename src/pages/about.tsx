@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Target, Eye, Star, ShieldCheck, Zap, Leaf, Users, Award, MapPin, Factory } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/SEO";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
@@ -29,6 +30,12 @@ const values = [
 export default function AboutPage() {
   return (
     <PageLayout>
+      <SEO
+        title="About Us"
+        description="Learn about SS Manufacturing Private Limited (SSMPL) — our vision, mission, core values, and journey as a trusted Tier-1 automotive safety component manufacturer near Kanchipuram, Tamil Nadu."
+        path="/about"
+        keywords="SSMPL company, automotive manufacturer history, Chennai Tier-1 supplier, vehicle safety company India"
+      />
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />

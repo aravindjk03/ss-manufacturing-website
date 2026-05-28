@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Factory, Cog, CheckSquare, GitBranch, ShieldCheck, ArrowRight, Ruler, Layers, Clock, Award, Server, Users } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/SEO";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
@@ -93,6 +94,12 @@ const processSteps = [
 export default function InfrastructurePage() {
   return (
     <PageLayout>
+      <SEO
+        title="Infrastructure"
+        description="Explore SSMPL's state-of-the-art manufacturing facility, capabilities, and end-to-end process flow — precision automotive component production near Kanchipuram, Tamil Nadu."
+        path="/infrastructure"
+        keywords="manufacturing facility India, automotive plant Chennai, production capabilities, precision manufacturing, Kanchipuram"
+      />
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />

@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 function useCountUp(target: number, duration = 2000, start = false) {
   const [count, setCount] = useState(0);
@@ -42,6 +43,12 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } 
 export default function HomePage() {
   return (
     <PageLayout>
+      <SEO
+        title="SS Manufacturing Private Limited"
+        description="SSMPL — Chennai-based automotive safety component manufacturer supplying IATF 16949 certified seat belts, retractors, buckles, and safety assemblies to HMI, RNAIPL, KMI and India's leading OEMs."
+        path="/"
+        keywords="seat belt manufacturer India, automotive safety, IATF 16949, OEM supplier Chennai, SSMPL, vehicle safety assemblies"
+      />
       {/* HERO */}
       <section className="relative min-h-screen flex items-center bg-[#0A1628] overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Download, FileText, Shield, Heart, Scale, Ban, Globe, Leaf, Users } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -69,6 +70,12 @@ const policies = [
 export default function PoliciesPage() {
   return (
     <PageLayout>
+      <SEO
+        title="Policies"
+        description="SSMPL corporate policies — quality, environment, health & safety, energy, information security, anti-bribery, human rights, and code of conduct governing our operations."
+        path="/policies"
+        keywords="corporate policies, quality policy, ISO 27001, ISO 37001 anti-bribery, code of conduct, human rights policy"
+      />
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />

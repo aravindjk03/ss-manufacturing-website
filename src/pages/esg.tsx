@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { Leaf, Users, Scale, CheckCircle, Award, TrendingDown } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { SEO } from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -52,6 +53,12 @@ export default function ESGPage() {
 
   return (
     <PageLayout>
+      <SEO
+        title="ESG & Sustainability"
+        description="SSMPL's commitment to Environmental, Social, and Governance excellence — ISO 14001, ISO 45001, ISO 50001 certified operations with measurable progress on emissions, safety, and ethical governance."
+        path="/esg"
+        keywords="ESG manufacturing India, sustainable automotive, ISO 14001, ISO 45001, ISO 50001, corporate governance, sustainability report"
+      />
       {/* HERO */}
       <section className="bg-[#0A1628] pt-44 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid-bg" />
